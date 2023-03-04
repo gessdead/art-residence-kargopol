@@ -8,7 +8,7 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./header"
+import Header from "./HeaderNew" 
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -28,8 +28,7 @@ const Layout = ({ children }) => {
       <div
         style={{
           margin: `0 auto`,
-          maxWidth: `var(--size-content)`,
-          padding: `var(--size-gutter)`,
+          maxWidth: `100vw`
         }}
       >
         <main>{children}</main>

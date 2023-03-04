@@ -3,6 +3,8 @@ import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
+import Promo from '../components/Promo/Promo';
+import Text from '../components/TextBlock'
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
 
@@ -31,6 +33,19 @@ const links = [
     description:
       "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
   },
+  {
+      text: "Build and Host",
+      url: "https://www.gatsbyjs.com/cloud",
+      description:
+      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
+  },
+  {
+      text: "Build and Host",
+      url: "https://www.gatsbyjs.com/cloud",
+      description:
+      "Now you’re ready to show the world! Give your Gatsby site superpowers: Build and host on Gatsby Cloud. Get started for free!",
+  },
+  
 ]
 
 const samplePageLinks = [
@@ -71,6 +86,7 @@ const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=de
 
 const IndexPage = () => (
   <Layout>
+      <Promo />
     <div className={styles.textCenter}>
       <StaticImage
         src="../images/example.png"
@@ -84,6 +100,7 @@ const IndexPage = () => (
       <h1>
         Welcome to <b>Gatsby!</b>
       </h1>
+        <Text />
       <p className={styles.intro}>
         <b>Example pages:</b>{" "}
         {samplePageLinks.map((link, i) => (
@@ -115,6 +132,9 @@ const IndexPage = () => (
         {i !== moreLinks.length - 1 && <> · </>}
       </React.Fragment>
     ))}
+
+
+
   </Layout>
 )
 
