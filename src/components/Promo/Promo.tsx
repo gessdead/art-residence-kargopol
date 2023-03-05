@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import { graphql, useStaticQuery } from 'gatsby';
 import {Box, Typography, Container} from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
@@ -7,6 +8,18 @@ import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDown
 import './Promo.css';
 
 const Promo = () => {
+
+    const bgImage = useStaticQuery(graphql`query getPromoImage {
+        file(relativePath: {eq: "main/leha.jpg"}) {
+            childImageSharp {
+            original {
+              width
+              height
+              src
+            }
+            }
+        }
+      }`)
 
     const scrollPage = () => {
         window.scrollTo({
@@ -17,7 +30,7 @@ const Promo = () => {
 
     return <Box className='Promo'
         style={{
-        backgroundImage: `url(../../images/main/leha.jpg)`
+        backgroundImage: `url(${bgImage.file.childImageSharp.original.src})`
     }}>
         <div className='Promo__Cover'></div>
         <Container maxWidth='lg' className='Promo__Wrapper'>

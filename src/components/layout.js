@@ -8,7 +8,8 @@
 import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 
-import Header from "./HeaderNew" 
+import Header from "./HeaderNew";
+import Footer from './FooterNew';
 import "./layout.css"
 
 const Layout = ({ children }) => {
@@ -32,19 +33,10 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer
-          style={{
-            marginTop: `var(--space-5)`,
-            fontSize: `var(--font-sm)`,
-          }}
-        >
-          © {new Date().getFullYear()} &middot; Built with
-          {` `}
-          <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+        <footer> <Footer /> </footer>
       </div>
     </>
   )
 }
 
-export default Layout
+export default Layout;

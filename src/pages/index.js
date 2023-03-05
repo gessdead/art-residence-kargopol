@@ -13,7 +13,7 @@ const IndexPage = () => (
 
       <Circle />
 
-      <Modules />
+      <Modules id='modules' />
 
   </Layout>
 )
