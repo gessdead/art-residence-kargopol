@@ -11,6 +11,7 @@ const Circle = () => (
                         src="../images/leha-circle.png"
                         loading="eager"
                         layout="fullWidth"
+                        style={{ maxWidth: '450px', margin: '0 auto' }}
                         quality={95}
                         formats={["auto", "webp"]}
                         alt="Дом Лехова"

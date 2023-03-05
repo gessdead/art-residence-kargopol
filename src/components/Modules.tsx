@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Link, graphql, useStaticQuery } from 'gatsby';
-import { GatsbyImage, getImage} from 'gatsby-plugin-image';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Container, Grid, Typography, Box } from '@mui/material';
 
 
@@ -41,37 +41,37 @@ const Modules = () => {
         period: 'июнь 2022'
     }];
 
-    return(
-    <Container maxWidth='xl'>
-        <Grid container
-              spacing={4}
-              justifyContent="center"
-              alignItems="center"
-              sx={{ padding: '25px 0', display: 'flex' }}>
-            {ModulesList.map(({image, title, text, period}) => (
-                <Grid item xs={12} sm={6} md={3} sx={{ display: 'flex', flexFlow: 'column nowrap', justifyContent: 'center' }}>
-                    <Link to='/' style={{display: 'flex', alignItems: 'center'}}>
-                        <GatsbyImage 
-                            image={image}
-                            alt=''
-                            style={{ margin: '0 auto' }}
-                         />
-                    </Link>
-                    <Box sx={{ display: 'flex', flexFlow: 'column nowrap', justifyContent: 'center'}}>
-                        <Typography variant='button' fontWeight='bold' sx={{ textAlign: 'center'}}>
-                           {title}
-                        </Typography>
-                        <Typography variant='body2' sx={{ textAlign: 'center'}}>
-                            {text}
-                        </Typography>
-                        <Typography variant='caption' sx={{ textAlign: 'center'}}>
-                            {period}
-                        </Typography>
-                    </Box>
-                </Grid>
-            ))}
-        </Grid>
-    </Container>
+    return (
+        <Container maxWidth='xl' id='modules'>
+            <Grid container
+                spacing={4}
+                justifyContent="center"
+                alignItems="center"
+                sx={{ padding: '25px 0', display: 'flex' }}>
+                {ModulesList.map(({ image, title, text, period }) => (
+                    <Grid item xs={12} sm={6} md={3} sx={{ display: 'flex', flexFlow: 'column nowrap', justifyContent: 'center' }}>
+                        <Link to='/' style={{ display: 'flex', alignItems: 'center' }}>
+                            <GatsbyImage
+                                image={image}
+                                alt=''
+                                style={{ margin: '0 auto' }}
+                            />
+                        </Link>
+                        <Box sx={{ display: 'flex', flexFlow: 'column nowrap', justifyContent: 'center' }}>
+                            <Typography variant='button' fontWeight='bold' sx={{ textAlign: 'center' }}>
+                                {title}
+                            </Typography>
+                            <Typography variant='body2' sx={{ textAlign: 'center' }}>
+                                {text}
+                            </Typography>
+                            <Typography variant='caption' sx={{ textAlign: 'center' }}>
+                                {period}
+                            </Typography>
+                        </Box>
+                    </Grid>
+                ))}
+            </Grid>
+        </Container>
     )
 }
 

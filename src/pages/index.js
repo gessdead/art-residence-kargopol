@@ -9,11 +9,11 @@ import * as styles from "../components/index.module.css"
 
 const IndexPage = () => (
   <Layout>
-      <Promo />
+    <Promo />
 
-      <Circle />
+    <Circle />
 
-      <Modules id='modules' />
+    <Modules />
 
   </Layout>
 )
