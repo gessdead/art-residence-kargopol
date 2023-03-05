@@ -1,5 +1,6 @@
 import * as React from 'react';
 
+import Box from '@mui/material/Box';
 import IconButton from '@mui/material/IconButton';
 import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
 
@@ -14,7 +15,7 @@ const Promo = () => {
         });
     }
 
-    return <section className='Promo'
+    return <Box className='Promo'
         style={{
         backgroundImage: `url(../../images/main/leha.jpg)`
     }}>
@@ -31,13 +32,14 @@ const Promo = () => {
                 <br/>
                 вовлекаем творческих профессионалов
             </span>
-            <div className='Promo__Arrow'>
-                <IconButton onClick={scrollPage}>
-                    <KeyboardArrowDownOutlinedIcon color="action" fontSize="large" />
-                </IconButton>
-            </div>
         </div>
-    </section>
+        <div className='Promo__Arrow'>
+            <IconButton sx={{color: 'white', position: 'absolute', bottom: '30px', zIndex: 2 }}
+                        onClick={scrollPage}>
+                <KeyboardArrowDownOutlinedIcon fontSize="large" />
+            </IconButton>
+        </div>
+    </Box>
 }
 
 export default Promo;

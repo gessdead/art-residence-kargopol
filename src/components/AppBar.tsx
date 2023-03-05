@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { StaticImage } from "gatsby-plugin-image";
+import { Link } from 'gatsby';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
@@ -43,30 +44,34 @@ function ResponsiveAppBar() {
     };
 
     return (
-            <AppBar position="static" sx={{ background: 'var(--color-code-bg)' }}>
+            <AppBar position="fixed" sx={{ background: 'var(--color-code-bg)' }}>
                 <Container maxWidth="xl">
                     <Toolbar disableGutters>
                         <Box sx={{ flexGrow: { xs: 1, md: 0 }}}>
-                            <StaticImage
-                                src="../images/logo.png"
-                                loading="eager"
-                                width={64}
-                                quality={95}
-                                formats={["auto", "webp"]}
-                                alt="Арт-резиденция"
-                            />
+                            <Link to='/'>
+                                <StaticImage
+                                    src="../images/logo.png"
+                                    loading="eager"
+                                    width={64}
+                                    quality={95}
+                                    formats={["auto", "webp"]}
+                                    alt="Арт-резиденция"
+                                />
+                            </Link>
                         </Box>
 
                         <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
                             {pages.map((page) => (
-                                    <Button
-                                        key={page.url}
-                                        onClick={handleCloseNavMenu}
-                                        sx={{ my: 2, color: 'black', display: 'block' }}
-                                        >
-                                        {page.text}
-                                    </Button>
-                                    ))}
+                                <Button
+                                    key={page.url}
+                                    onClick={handleCloseNavMenu}
+                                    sx={{ my: 2, color: 'black', display: 'block' }}
+                                    >
+                                    <Link to={page.url} style={{
+                                        textDecoration: 'none'
+                                    }}>{page.text}</Link>
+                                </Button>
+                                ))}
                         </Box>
                         <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
                             <IconButton

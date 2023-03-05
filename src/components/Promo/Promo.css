@@ -4,11 +4,12 @@
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: calc(100vh - 96px);
+    height: 100vh;
     position: relative;
     background-position: center bottom;
     background-size: cover;
     color: #fff;
+    overflow: hidden;
 }
 
 .Promo__Cover {
@@ -29,7 +30,7 @@
 .Promo__Title {
     line-height: 1;
     text-align: center;
-    font-size: 68px;
+    font-size: 4rem;
     font-weight: 500;
     margin-bottom: var(--space-5);
 }
@@ -37,7 +38,7 @@
 .Promo__Descr {
     text-align: center;
     font-weight: lighter;
-    font-size: 22px;
+    font-size: 1.5rem;
     line-height: 1.1;
 }
 

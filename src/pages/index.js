@@ -4,6 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import Layout from "../components/layout"
 import Promo from '../components/Promo/Promo';
+import Circle from '../components/Circle/Circle';
 import Text from '../components/TextBlock'
 import Seo from "../components/seo"
 import * as styles from "../components/index.module.css"
@@ -87,6 +88,8 @@ const utmParameters = `?utm_source=starter&utm_medium=start-page&utm_campaign=de
 const IndexPage = () => (
   <Layout>
       <Promo />
+
+      <Circle />
     <div className={styles.textCenter}>
       <StaticImage
         src="../images/example.png"
@@ -97,6 +100,7 @@ const IndexPage = () => (
         alt=""
         style={{ marginBottom: `var(--space-3)` }}
       />
+
       <h1>
         Welcome to <b>Gatsby!</b>
       </h1>
