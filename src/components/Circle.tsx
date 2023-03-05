@@ -8,7 +8,7 @@ const Circle = () => (
             <Grid item xs={12} md={6}>
                 <div>
                     <StaticImage
-                        src="../../images/leha-circle.png"
+                        src="../images/leha-circle.png"
                         loading="eager"
                         layout="fullWidth"
                         quality={95}

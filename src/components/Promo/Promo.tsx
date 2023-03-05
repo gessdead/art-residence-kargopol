@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Box from '@mui/material/Box';
+import {Box, Typography, Container} from '@mui/material';
 import IconButton from '@mui/material/IconButton';
 import KeyboardArrowDownOutlinedIcon from '@mui/icons-material/KeyboardArrowDownOutlined';
 
@@ -20,19 +20,20 @@ const Promo = () => {
         backgroundImage: `url(../../images/main/leha.jpg)`
     }}>
         <div className='Promo__Cover'></div>
-        <div className='Promo__Wrapper'>
-            <span className='Promo__Title'>
+        <Container maxWidth='lg' className='Promo__Wrapper'>
+            <Typography variant='h2' mb={6} fontWeight='bold' textAlign='center'>
                 Арт-резиденция
                 <br/>
                 «Архитектурная мозаика Каргополя»
-            </span>
+            </Typography>
 
-            <span className='Promo__Descr'>
+
+            <Typography variant='h5' fontWeight='lighter' textAlign='center'>
                 Переосмысляем ценности деревянной городской архитектуры Каргополя и
                 <br/>
                 вовлекаем творческих профессионалов
-            </span>
-        </div>
+            </Typography>
+        </Container>
         <div className='Promo__Arrow'>
             <IconButton sx={{color: 'white', position: 'absolute', bottom: '30px', zIndex: 2 }}
                         onClick={scrollPage}>
