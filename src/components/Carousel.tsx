@@ -26,7 +26,7 @@ const Carousel = () => {
         }
     });
 
-    return <Container maxWidth='lg'>
+    return <Container id='concept' maxWidth='lg'>
             <Typography variant='h3' textAlign='center'>Концепция</Typography>
             <BaseCarousel 
                 navButtonsAlwaysVisible={true}

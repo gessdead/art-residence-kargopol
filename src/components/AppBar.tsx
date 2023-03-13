@@ -23,7 +23,7 @@ const pages = [{
     url: '#modules'
 }, {
     text: 'Концепция',
-    url: '/'
+    url: '#concept'
 }, {
     text: 'Авторы',
     url: '/'
