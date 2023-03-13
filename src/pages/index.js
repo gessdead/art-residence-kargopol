@@ -4,8 +4,8 @@ import Layout from "../components/layout"
 import Promo from '../components/Promo/Promo';
 import Circle from '../components/Circle';
 import Modules from '../components/Modules';
+import Carousel from '../components/Carousel';
 import Seo from '../components/seo';
-import * as styles from "../components/index.module.css"
 
 const IndexPage = () => (
   <Layout>
@@ -14,6 +14,8 @@ const IndexPage = () => (
     <Circle />
 
     <Modules />
+
+    <Carousel />
 
   </Layout>
 )
