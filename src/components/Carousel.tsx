@@ -2,7 +2,7 @@ import * as React from 'react';
 import { default as BaseCarousel } from 'react-material-ui-carousel'
 import { graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
-import { Container } from '@mui/material';
+import { Container, Typography } from '@mui/material';
 
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
@@ -27,6 +27,7 @@ const Carousel = () => {
     });
 
     return <Container maxWidth='lg'>
+            <Typography variant='h3' textAlign='center'>Концепция</Typography>
             <BaseCarousel 
                 navButtonsAlwaysVisible={true}
                 NextIcon={<NavigateNextIcon />}
