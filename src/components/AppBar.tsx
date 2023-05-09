@@ -14,10 +14,10 @@ import MenuItem from '@mui/material/MenuItem';
 
 const pages = [{
     text: 'О проекте',
-    url: '404'
+    url: '/first-module'
 }, {
     text: 'События',
-    url: '/'
+    url: '/page-2'
 }, {
     text: 'Модули',
     url: '#modules'

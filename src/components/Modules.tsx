@@ -12,7 +12,7 @@ const Modules = () => {
                 edges {
                 node {
                     childImageSharp {
-                    gatsbyImageData
+                        gatsbyImageData
                     }
                 }
                 }

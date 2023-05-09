@@ -15,8 +15,6 @@ const IndexPage = () => (
 
     <Modules />
 
-    <Carousel />
-
   </Layout>
 )
 
