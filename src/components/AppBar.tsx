@@ -22,9 +22,6 @@ const pages = [{
     text: 'Модули',
     url: '#modules'
 }, {
-    text: 'Концепция',
-    url: '#concept'
-}, {
     text: 'Авторы',
     url: '/'
 }, {
@@ -44,74 +41,71 @@ function ResponsiveAppBar() {
     };
 
     return (
-            <AppBar position="fixed" sx={{ background: 'var(--color-code-bg)' }}>
-                <Container maxWidth="xl">
-                    <Toolbar disableGutters>
-                        <Box sx={{ flexGrow: { xs: 1, md: 0 }}}>
-                            <Link to='/'>
-                                <StaticImage
-                                    src="../images/logo.png"
-                                    loading="eager"
-                                    width={64}
-                                    quality={95}
-                                    formats={["auto", "webp"]}
-                                    alt="Арт-резиденция"
-                                />
-                            </Link>
-                        </Box>
+        <AppBar position="fixed" sx={{ background: 'var(--color-code-bg)' }}>
+            <Container maxWidth="xl">
+                <Toolbar disableGutters>
+                    <Box sx={{ flexGrow: { xs: 1, md: 0 }}}>
+                        <Link to='/'>
+                            <StaticImage
+                                src="../images/logo.png"
+                                loading="eager"
+                                width={64}
+                                quality={95}
+                                formats={["auto", "webp"]}
+                                alt="Арт-резиденция"
+                            />
+                        </Link>
+                    </Box>
 
-                        <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
-                            {pages.map((page) => (
-                                <Button
-                                    key={page.url}
-                                    onClick={handleCloseNavMenu}
-                                    sx={{ my: 2, color: 'black', display: 'block' }}
-                                    >
-                                    <Link to={page.url} style={{
-                                        textDecoration: 'none'
-                                    }}>{page.text}</Link>
-                                </Button>
+                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                        {pages.map((page, index) => (
+                            <Button
+                                key={page.url + index}
+                                onClick={handleCloseNavMenu}
+                                sx={{ my: 2, color: 'black', display: 'block' }}
+                                >
+                                <Link to={page.url} style={{
+                                    textDecoration: 'none'
+                                }}>{page.text}</Link>
+                            </Button>
+                            ))}
+                    </Box>
+                    <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+                        <IconButton
+                            size="large"
+                            aria-label="account of current user"
+                            aria-controls="menu-appbar"
+                            aria-haspopup="true"
+                            onClick={handleOpenNavMenu}
+                            color="black"
+                            >
+                            <MenuIcon />
+                        </IconButton>
+                        <Menu
+                            id="menu-appbar"
+                            anchorEl={anchorElNav}
+                            anchorOrigin={{
+                            vertical: 'bottom',
+                                horizontal: 'left',
+                            }}
+                            keepMounted
+                            transformOrigin={{
+                            vertical: 'top',
+                                horizontal: 'left',
+                            }}
+                            open={Boolean(anchorElNav)}
+                            onClose={handleCloseNavMenu}
+                            sx={{ display: { xs: 'block', md: 'none' } }}>
+                            {pages.map((page, index) => (
+                                <MenuItem key={page.url + index} onClick={handleCloseNavMenu}>
+                                    <Typography textAlign="center">{page.text}</Typography>
+                                </MenuItem>
                                 ))}
-                        </Box>
-                        <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
-                            <IconButton
-                                size="large"
-                                aria-label="account of current user"
-                                aria-controls="menu-appbar"
-                                aria-haspopup="true"
-                                onClick={handleOpenNavMenu}
-                                color="black"
-                                >
-                                <MenuIcon />
-                            </IconButton>
-                            <Menu
-                                id="menu-appbar"
-                                anchorEl={anchorElNav}
-                                anchorOrigin={{
-                                vertical: 'bottom',
-                                    horizontal: 'left',
-                                }}
-                                keepMounted
-                                transformOrigin={{
-                                vertical: 'top',
-                                    horizontal: 'left',
-                                }}
-                                open={Boolean(anchorElNav)}
-                                onClose={handleCloseNavMenu}
-                                sx={{
-                                display: { xs: 'block', md: 'none' },
-                                }}
-                                >
-                                {pages.map((page) => (
-                                    <MenuItem key={page.url} onClick={handleCloseNavMenu}>
-                                        <Typography textAlign="center">{page.text}</Typography>
-                                    </MenuItem>
-                                    ))}
-                            </Menu>
-                        </Box>
-                    </Toolbar>
-                </Container>
-            </AppBar>
-            );
+                        </Menu>
+                    </Box>
+                </Toolbar>
+            </Container>
+        </AppBar>
+        );
 }
 export default ResponsiveAppBar;

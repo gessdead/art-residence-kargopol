@@ -7,9 +7,9 @@ import { Container, Typography } from '@mui/material';
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 
-const Carousel = ({title}) => {
+const SecondCarousel = ({title}) => {
     const IMAGES_DATA = useStaticQuery(graphql`query carouselImagesQuery {
-        allFile(filter: {relativeDirectory: {eq: "mainCarousel"}}) {
+        allFile(filter: {relativeDirectory: {eq: "2ndCarousel"}}) {
             edges {
             node {
                 childImageSharp {
@@ -20,6 +20,7 @@ const Carousel = ({title}) => {
         }
     }`);
 
+    debugger
     const slides = IMAGES_DATA.allFile.edges.map((item) => {
         return {
             image: getImage(item.node.childImageSharp.gatsbyImageData)
@@ -39,4 +40,4 @@ const Carousel = ({title}) => {
     </Container>
 }
 
-export default Carousel;
+export default SecondCarousel;
