@@ -11,11 +11,11 @@ const ThirdCarousel = ({ title }) => {
     const IMAGES_DATA = useStaticQuery(graphql`query carouselImagesQuery {
         allFile(filter: {relativeDirectory: {eq: "3rdCarousel"}}) {
             edges {
-            node {
-                childImageSharp {
-                   gatsbyImageData
+                node {
+                    childImageSharp {
+                       gatsbyImageData
+                    }
                 }
-            }
             }
         }
     }`)
