@@ -18,13 +18,13 @@ const ThirdCarousel = ({ title }) => {
                 }
             }
         }
-    }`)
+    }`);
 
     const slides = IMAGES_DATA.allFile.edges.map((item) => {
         return {
             image: getImage(item.node.childImageSharp.gatsbyImageData)
         }
-    })
+    });
 
     return (
         <Container id='concept' maxWidth='lg'>
@@ -41,4 +41,4 @@ const ThirdCarousel = ({ title }) => {
     )
 }
 
-export default ThirdCarousel
+export default ThirdCarousel;
