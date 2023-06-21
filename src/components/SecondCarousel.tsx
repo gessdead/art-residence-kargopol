@@ -8,19 +8,18 @@ import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 
 const SecondCarousel = ({title}) => {
-    const IMAGES_DATA = useStaticQuery(graphql`query carouselImagesQuery {
+    const IMAGES_DATA = useStaticQuery(graphql`query secondCarouselImagesQuery {
         allFile(filter: {relativeDirectory: {eq: "2ndCarousel"}}) {
             edges {
-            node {
-                childImageSharp {
-                   gatsbyImageData
+                node {
+                    childImageSharp {
+                        gatsbyImageData
+                    }
                 }
-            }
             }
         }
     }`);
 
-    debugger
     const slides = IMAGES_DATA.allFile.edges.map((item) => {
         return {
             image: getImage(item.node.childImageSharp.gatsbyImageData)

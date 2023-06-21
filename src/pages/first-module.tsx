@@ -4,7 +4,7 @@ import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image"
 import { graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
-import Carousel from "../components/Carousel"
+import Carousel from "../components/Carousel" 
 import Seo from "../components/seo"
 
 const SecondPage = () => {

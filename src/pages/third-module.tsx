@@ -3,19 +3,23 @@ import * as React from "react"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import ThirdCarousel from "../components/ThirdCarousel"
+import { Container } from "@mui/material"
 
-const ThirdPage = () => {
+const FourthPage = () => {
 
 
     return (
         <Layout>
-          <ThirdCarousel title='Концепция' />
+            <Container maxWidth='xl' sx={{ paddingTop: "70px" }}>
+                <ThirdCarousel title='Концепция' />
+            </Container>
         </Layout>
       )
+
 } 
 
-export const Head = () => <Seo title="Второй модуль" />
+export const Head = () => <Seo title="Третий модуль" />
 
 
-export default ThirdPage;
+export default FourthPage;
 

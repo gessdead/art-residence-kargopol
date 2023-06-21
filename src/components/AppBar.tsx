@@ -16,11 +16,8 @@ const pages = [{
     text: 'О проекте',
     url: '/first-module'
 }, {
-    text: 'События',
-    url: '/page-2'
-}, {
     text: 'Модули',
-    url: '#modules'
+    url: '/#modules'
 }, {
     text: 'Авторы',
     url: '/'

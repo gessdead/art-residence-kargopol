@@ -8,7 +8,7 @@ import NavigateNextIcon from "@mui/icons-material/NavigateNext"
 import NavigateBeforeIcon from "@mui/icons-material/NavigateBefore"
 
 const ThirdCarousel = ({ title }) => {
-    const IMAGES_DATA = useStaticQuery(graphql`query carouselImagesQuery {
+    const IMAGES_DATA = useStaticQuery(graphql`query thirdCarouselImagesQuery {
         allFile(filter: {relativeDirectory: {eq: "3rdCarousel"}}) {
             edges {
                 node {
