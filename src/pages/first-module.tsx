@@ -1,6 +1,6 @@
 import * as React from "react"
-import { Container, Grid, Typography, Box } from "@mui/material"
-import { GatsbyImage, StaticImage, getImage } from "gatsby-plugin-image"
+import { Container, Typography } from "@mui/material"
+import { StaticImage } from "gatsby-plugin-image"
 import { graphql, useStaticQuery } from "gatsby"
 
 import Layout from "../components/layout"
@@ -8,6 +8,21 @@ import Carousel from "../components/Carousel"
 import Seo from "../components/seo"
 
 const SecondPage = () => {
+    const IMAGES_DATA = useStaticQuery(graphql`query firstCarouselImagesQuery {
+        allFile(filter: {relativeDirectory: {eq: "mainCarousel"}}) {
+            edges {
+                node {
+                    childImageSharp {
+                        gatsbyImageData,
+                        fluid {
+                            originalName
+                        }
+                    }
+                }
+            }
+        }
+    }`);
+
     return (
         <Layout>
             <Container maxWidth='xl' sx={{ paddingTop: "70px" }}>
@@ -54,7 +69,7 @@ const SecondPage = () => {
                 </Typography>
             </Container>
 
-            <Carousel title='Концепция'/>
+            <Carousel title='Концепция' slidesData={IMAGES_DATA} />
         </Layout>
     )
 }

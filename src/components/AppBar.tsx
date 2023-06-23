@@ -14,7 +14,7 @@ import MenuItem from '@mui/material/MenuItem';
 
 const pages = [{
     text: 'О проекте',
-    url: '/first-module'
+    url: '/about'
 }, {
     text: 'Модули',
     url: '/#modules'

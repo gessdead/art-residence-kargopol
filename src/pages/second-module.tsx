@@ -1,17 +1,32 @@
 import * as React from "react"
 
-import Layout from "../components/layout"
 import { Container } from "@mui/material"
+import { graphql, useStaticQuery } from "gatsby"
+import Layout from "../components/layout"
 import Seo from "../components/seo"
-import SecondCarousel from "../components/SecondCarousel"
+import Carousel from "../components/Carousel"
 
 const ThirdPage = () => {
+    const IMAGES_DATA = useStaticQuery(graphql`query secondCarouselImagesQuery {
+        allFile(filter: {relativeDirectory: {eq: "2ndCarousel"}}) {
+            edges {
+                node {
+                    childImageSharp {
+                        gatsbyImageData,
+                        fluid {
+                            originalName
+                        }
+                    }
+                }
+            }
+        }
+    }`);
 
 
     return (
         <Layout>
             <Container maxWidth='xl' sx={{ paddingTop: "70px" }}>
-                <SecondCarousel title='Концепция' />
+                <Carousel title='Концепция' slidesData={IMAGES_DATA} />
             </Container>
         </Layout>
       )
