@@ -10,11 +10,11 @@ const Modules = () => {
         query moduleImagesQuery {
             allFile(filter: {relativeDirectory: {eq: "moduleIcons"}}) {
                 edges {
-                node {
-                    childImageSharp {
-                        gatsbyImageData
+                    node {
+                        childImageSharp {
+                            gatsbyImageData
+                        }
                     }
-                }
                 }
             }
         }`);
@@ -44,7 +44,7 @@ const Modules = () => {
         id: 'm4',
         image: getImage(IMAGES_DATA.allFile.edges[3].node.childImageSharp.gatsbyImageData),
         title: 'МОДУЛЬ 4',
-        text: 'Создание концепции развития Арт-резиденции в доме купца А.П. Лёхова',
+        text: 'Создание архитектурно-исторического кода города Каргополя и применение его в благоустройстве (на территории домов кластера "Фамилия")"',
         period: 'июнь 2023',
         link: ''
     }];
@@ -56,8 +56,8 @@ const Modules = () => {
                 justifyContent="center"
                 alignItems="center"
                 sx={{ padding: '25px 0', display: 'flex' }}>
-                {MODULES_LIST.map(({ image, title, text, period, link }) => (
-                    <Grid item xs={12} sm={6} md={3} sx={{ display: 'flex', flexFlow: 'column nowrap', justifyContent: 'center' }}>
+                {MODULES_LIST.map(({ image, title, text, period, link, id }) => (
+                    <Grid item key={id} xs={12} sm={6} md={3} sx={{ display: 'flex', flexFlow: 'column nowrap', justifyContent: 'center' }}>
                         <Link to={link} style={{ display: 'flex', alignItems: 'center' }}>
                             <GatsbyImage
                                 image={image}

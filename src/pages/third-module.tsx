@@ -13,7 +13,7 @@ const FourthPage = () => {
             edges {
                 node {
                     childImageSharp {
-                        gatsbyImageData,
+                        gatsbyImageData(layout: FULL_WIDTH),
                         fluid {
                             originalName
                         }

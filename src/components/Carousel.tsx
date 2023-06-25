@@ -20,6 +20,8 @@ const Carousel = ({title, slidesData}) => {
     return <Container id='concept' maxWidth='lg'>
             <Typography variant='h3' textAlign='center'>{title}</Typography>
             <BaseCarousel
+                autoPlay={false}
+                animation='slide'
                 navButtonsAlwaysVisible={true}
                 NextIcon={<NavigateNextIcon />}
                 PrevIcon={<NavigateBeforeIcon />}>

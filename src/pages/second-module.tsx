@@ -12,7 +12,7 @@ const ThirdPage = () => {
             edges {
                 node {
                     childImageSharp {
-                        gatsbyImageData,
+                        gatsbyImageData(layout: FULL_WIDTH),
                         fluid {
                             originalName
                         }
