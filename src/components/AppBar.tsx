@@ -46,7 +46,7 @@ function ResponsiveAppBar() {
                             <StaticImage
                                 src="../images/logo.png"
                                 loading="eager"
-                                width={64}
+                                width={50}
                                 quality={95}
                                 formats={["auto", "webp"]}
                                 alt="Арт-резиденция"
@@ -54,7 +54,14 @@ function ResponsiveAppBar() {
                         </Link>
                     </Box>
 
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
+                    <Box sx={{ 
+                        flexGrow: 1,
+                        marginLeft: '8px',
+                        display: { 
+                            xs: 'none', 
+                            md: 'flex' 
+                            }
+                        }}>
                         {pages.map((page, index) => (
                             <Button
                                 key={page.url + index}

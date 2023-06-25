@@ -3,8 +3,6 @@ import { Link, graphql, useStaticQuery } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { Container, Grid, Typography, Box } from '@mui/material';
 
-
-
 const Modules = () => {
     const IMAGES_DATA = useStaticQuery(graphql`
         query moduleImagesQuery {
