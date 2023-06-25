@@ -20,7 +20,7 @@ const pages = [{
     url: '/#modules'
 }, {
     text: 'Эксперты',
-    url: '/'
+    url: '/adepts'
 }, {
     text: 'Контакты',
     url: '/contacts'
