@@ -23,7 +23,7 @@ const pages = [{
     url: '/'
 }, {
     text: 'Контакты',
-    url: '/'
+    url: '/contacts'
 }];
 
 function ResponsiveAppBar() {

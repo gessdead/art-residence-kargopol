@@ -13,8 +13,6 @@ const Promo = () => {
         file(relativePath: {eq: "main/leha.jpg"}) {
             childImageSharp {
             original {
-              width
-              height
               src
             }
             }
