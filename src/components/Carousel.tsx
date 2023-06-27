@@ -23,15 +23,22 @@ const Carousel = ({title, slidesData}) => {
                 autoPlay={false}
                 animation='slide'
                 navButtonsAlwaysVisible={true}
+                indicators={false}
                 NextIcon={<NavigateNextIcon />}
                 PrevIcon={<NavigateBeforeIcon />}>
                 {
-                    slides.map((item, i) => 
-                    <GatsbyImage 
+                    slides.map((item, i) =>
+                    <div style={{
+                        display: 'flex',
+                        justifyContent: 'center'
+                    }}>
+                        <GatsbyImage 
                         image={item.image} 
                         key={i} 
-                        alt='' 
-                    />)
+                        alt=''
+                    />
+                    </div>
+                    )
                 }
             </BaseCarousel>
     </Container>

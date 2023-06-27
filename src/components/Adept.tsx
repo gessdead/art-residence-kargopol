@@ -12,9 +12,11 @@ const Adept = ({ photo }) => (
             image={photo}
             loading="eager"
             style={{
-                 maxWidth: '64px', 
+                 minWidth: '64px',
                  marginRight: '16px',
-                 width: '100%'
+                 width: '64px',
+                 height: '64px',
+                 borderRadius: '50%'
                 }}
             alt="Дом Лехова"
         />

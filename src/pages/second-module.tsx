@@ -12,7 +12,12 @@ const ThirdPage = () => {
             edges {
                 node {
                     childImageSharp {
-                        gatsbyImageData(layout: FULL_WIDTH),
+                        gatsbyImageData(
+                            layout: CONSTRAINED, 
+                            quality: 100, 
+                            formats: JPG,
+                            placeholder: BLURRED
+                        ),
                         fluid {
                             originalName
                         }
@@ -25,7 +30,7 @@ const ThirdPage = () => {
 
     return (
         <Layout>
-            <Container maxWidth='xl' sx={{ paddingTop: "70px" }}>
+            <Container maxWidth='lg' sx={{ paddingTop: "70px" }}>
                 <Carousel title='Концепция' slidesData={IMAGES_DATA} />
             </Container>
         </Layout>
