@@ -2,7 +2,14 @@ import * as React from 'react';
 import { Box, Typography, Container, Button } from '@mui/material';
 import { Link } from 'gatsby';
 
-const HeadBlock = ({title, descr, image, url, height = '100vh'}) => {
+const HeadBlock = ({
+    title, 
+    descr, 
+    image, 
+    url = null, 
+    height = '100vh', 
+    fontColor = 'white'
+}) => {
     return <Box className='Promo'
         style={{
             display: 'flex',
@@ -14,7 +21,7 @@ const HeadBlock = ({title, descr, image, url, height = '100vh'}) => {
             position: 'relative',
             backgroundPosition: 'center bottom',
             backgroundSize: 'cover',
-            color: '#fff',
+            color: fontColor,
             overflow: 'hidden',
             backgroundImage: `url(${image})`
         }}>
