@@ -12,7 +12,7 @@ import Header from "./HeaderNew";
 import Footer from './FooterNew';
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, withoutAppBar }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -25,7 +25,7 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header withoutAppBar={withoutAppBar} siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={{
           margin: `0 auto`,

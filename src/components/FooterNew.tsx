@@ -16,13 +16,18 @@ const Footer = () => {
 
     return (
         <div>
-            <div style={{ 
-                    width: '100%', 
-                    height: '16px',
-                    marginTop: '20px',
-                    marginBottom: '20px',
-                    backgroundImage: `url(${bgImage.file.childImageSharp.original.src})`
-                }}>
+            <div style={{
+                margin: '20px 0'
+            }}>
+                <StaticImage
+                    src="../images/separator-arrow.png"
+                    loading="eager"
+                    layout="fullWidth"
+                    style={{ maxWidth: '400px', margin: '0 auto' }}
+                    quality={100}
+                    formats={["auto", "webp"]}
+                    alt="Дом Лехова"
+                />
             </div>
             <Container maxWidth='xl'>
                 <Grid container

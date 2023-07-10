@@ -14,16 +14,21 @@ import MenuItem from '@mui/material/MenuItem';
 
 const pages = [{
     text: 'О проекте',
-    url: '/about'
+    url: '/'
 }, {
-    text: 'Модули',
+    text: 'О Модулях',
     url: '/#modules'
-}, {
-    text: 'Эксперты',
-    url: '/adepts'
-}, {
-    text: 'Контакты',
+},
+//  {
+//     text: 'Об экспертах',
+//     url: '/adepts'
+// },
+ {
+    text: 'О нас',
     url: '/contacts'
+}, {
+    text: 'О будущем',
+    url: '/about'
 }];
 
 function ResponsiveAppBar() {
@@ -38,30 +43,28 @@ function ResponsiveAppBar() {
     };
 
     return (
-        <AppBar position="fixed" sx={{ background: 'var(--color-code-bg)' }}>
-            <Container maxWidth="xl">
+        <AppBar 
+            //position='relative' 
+            sx={{ 
+                background: 'white',
+                position: {
+                    sx: 'fixed',
+                    md: 'relative'
+                },
+                boxShadow: 'none'
+             }}
+        >
+            <Container maxWidth="lg">
                 <Toolbar disableGutters>
-                    <Box sx={{ flexGrow: { xs: 1, md: 0 }}}>
-                        <Link to='/'>
-                            <StaticImage
-                                src="../images/logo.png"
-                                loading="eager"
-                                width={50}
-                                quality={95}
-                                formats={["auto", "webp"]}
-                                alt="Арт-резиденция"
-                            />
-                        </Link>
-                    </Box>
-
                     <Box sx={{ 
                         flexGrow: 1,
-                        marginLeft: '8px',
+                        margin: '0 auto',
+                        justifyContent: 'space-around',
                         display: { 
                             xs: 'none', 
                             md: 'flex' 
-                            }
-                        }}>
+                        }
+                    }}>
                         {pages.map((page, index) => (
                             <Button
                                 key={page.url + index}
@@ -69,6 +72,10 @@ function ResponsiveAppBar() {
                                 sx={{ my: 2, color: 'black', display: 'block' }}
                                 >
                                 <Link to={page.url} style={{
+                                    fontFamily: 'var(--font-sans)',
+                                    fontWeight: '700',
+                                    fontSize: '22px',
+                                    textTransform: 'lowercase',
                                     textDecoration: 'none'
                                 }}>{page.text}</Link>
                             </Button>
