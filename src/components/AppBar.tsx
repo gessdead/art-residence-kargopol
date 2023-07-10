@@ -44,12 +44,17 @@ function ResponsiveAppBar() {
 
     return (
         <AppBar 
-            //position='relative' 
             sx={{ 
-                background: 'white',
+                background: {
+                    xs: 'transparent',
+                    md: 'white'
+                },
                 position: {
-                    sx: 'fixed',
+                    xs: 'fixed',
                     md: 'relative'
+                },
+                top: {
+                    xs: '10px'
                 },
                 boxShadow: 'none'
              }}
@@ -81,7 +86,7 @@ function ResponsiveAppBar() {
                             </Button>
                             ))}
                     </Box>
-                    <Box sx={{ display: { xs: 'flex', md: 'none' } }}>
+                    <Box sx={{ display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-end' }}>
                         <IconButton
                             size="large"
                             aria-label="account of current user"
@@ -89,6 +94,10 @@ function ResponsiveAppBar() {
                             aria-haspopup="true"
                             onClick={handleOpenNavMenu}
                             color="black"
+                            sx={{
+                                background: 'white',
+                                borderRadius: '50%',
+                            }}
                             >
                             <MenuIcon />
                         </IconButton>
