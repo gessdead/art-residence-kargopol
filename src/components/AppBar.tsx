@@ -72,6 +72,7 @@ function ResponsiveAppBar() {
                                 <Link to={page.url} style={{
                                     fontFamily: 'var(--font-sans)',
                                     fontWeight: '700',
+                                    fontSize: '22px',
                                     textTransform: 'lowercase',
                                     textDecoration: 'none'
                                 }}>{page.text}</Link>

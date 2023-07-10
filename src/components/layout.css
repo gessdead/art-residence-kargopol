@@ -230,3 +230,8 @@ pre tt:before,
 pre tt:after {
   content: none;
 }
+
+.hided_scrollbar::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}

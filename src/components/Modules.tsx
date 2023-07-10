@@ -55,8 +55,18 @@ const Modules = () => {
                 alignItems="center"
                 sx={{ padding: '25px 0', display: 'flex' }}>
                 {MODULES_LIST.map(({ image, title, text, period, link, id }) => (
-                    <Grid item key={id} xs={12} sm={6} md={3} sx={{ display: 'flex', flexFlow: 'column nowrap', justifyContent: 'center' }}>
-                        <Link to={link} style={{ display: 'flex', alignItems: 'center' }}>
+                    <Grid 
+                        item 
+                        key={id} 
+                        xs={12} 
+                        sm={6} 
+                        md={3} 
+                        sx={{ 
+                            display: 'flex', 
+                            flexFlow: 'column nowrap', 
+                            justifyContent: 'center' 
+                        }}>
+                        <Link to={link} style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
                             <GatsbyImage
                                 image={image}
                                 alt=''
