@@ -72,6 +72,8 @@ const Modules = () => {
                                 alt=''
                                 style={{ margin: '0 auto' }}
                             />
+
+                            
                         </Link>
                         <Box sx={{ display: 'flex', flexFlow: 'column nowrap', justifyContent: 'center' }}>
                             <Typography variant='button' fontWeight='bold' sx={{ textAlign: 'center' }}>
