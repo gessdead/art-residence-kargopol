@@ -19,7 +19,7 @@ const Modules = () => {
 
     const MODULES_LIST = [{
         id: 'm1',
-        image: getImage(IMAGES_DATA.allFile.edges[0].node.childImageSharp.gatsbyImageData),
+        image: getImage(IMAGES_DATA.allFile.edges[3].node.childImageSharp.gatsbyImageData),
         title: 'МОДУЛЬ 1',
         text: 'Создание концепции развития Арт-резиденции в доме купца А.П. Лёхова',
         period: 'октябрь 2022',
@@ -40,7 +40,7 @@ const Modules = () => {
         link: '/third-module'
     }, {
         id: 'm4',
-        image: getImage(IMAGES_DATA.allFile.edges[3].node.childImageSharp.gatsbyImageData),
+        image: getImage(IMAGES_DATA.allFile.edges[0].node.childImageSharp.gatsbyImageData),
         title: 'МОДУЛЬ 4',
         text: 'Создание архитектурно-исторического кода города Каргополя и применение его в благоустройстве (на территории домов кластера "Фамилия")"',
         period: 'июнь 2023',
@@ -73,7 +73,7 @@ const Modules = () => {
                                 style={{ margin: '0 auto' }}
                             />
 
-                            
+
                         </Link>
                         <Box sx={{ display: 'flex', flexFlow: 'column nowrap', justifyContent: 'center' }}>
                             <Typography variant='button' fontWeight='bold' sx={{ textAlign: 'center' }}>
