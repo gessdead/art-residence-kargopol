@@ -2,11 +2,12 @@ import * as React from "react";
 
 import { Container, Typography } from "@mui/material";
 import { graphql, useStaticQuery } from "gatsby";
-import { StaticImage } from "gatsby-plugin-image";
+import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import Carousel from "../components/Carousel";
 import HeadBlock from "../components/HeadBlock";
+import HGallery from "../components/HGallery";
 
 const ThirdPage = () => {
     const IMAGES_DATA = useStaticQuery(graphql`query secondCarouselImagesQuery {
@@ -36,6 +37,16 @@ const ThirdPage = () => {
         }
     }`);
 
+    const slides = IMAGES_DATA.allFile.edges.map((item) => {
+        return {
+            image: getImage(item.node.childImageSharp.gatsbyImageData),
+            id: parseInt(item.node.childImageSharp.fluid.originalName)
+        }
+    });
+
+    // сотртируем по числовому порядку 
+    slides.sort((a, b) => a.id - b.id);
+
 
     return (
         <Layout>
@@ -51,8 +62,16 @@ const ThirdPage = () => {
                     ощутить, как она сказывается на архитектурно-визуальном восприятии города. Масштабное 
                     исследование городского полотна и чувства, которое оно вызвало у его авторов.
                 </Typography>
-                <Carousel title='' slidesData={IMAGES_DATA} />
             </Container>
+            <HGallery>
+                {slides.map((item, i) =>
+                    <GatsbyImage 
+                        image={item.image} 
+                        key={i} 
+                        alt='' 
+                    />
+                )}
+            </HGallery>
             <Container maxWidth='xl'>
                 <StaticImage
                     src="../images/participants.png"
