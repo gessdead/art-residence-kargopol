@@ -18,16 +18,7 @@ const SecondPage = () => {
                 }
             }
         }
-    }`)
-
-    const photosArr = [
-        '../images/firstModule/gallery/1.jpg',
-        '../images/firstModule/gallery/2.jpg',
-        '../images/firstModule/gallery/3.jpg',
-        '../images/firstModule/gallery/4.jpg',
-        '../images/firstModule/gallery/5.jpg'
-        
-    ];
+    }`);
 
     return (
         <Layout>

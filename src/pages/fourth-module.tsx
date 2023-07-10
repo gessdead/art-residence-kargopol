@@ -5,7 +5,6 @@ import { Container, Typography } from "@mui/material";
 import { StaticImage } from "gatsby-plugin-image";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import Carousel from "../components/Carousel";
 import HeadBlock from "../components/HeadBlock";
 import HGallery from "../components/HGallery";
 

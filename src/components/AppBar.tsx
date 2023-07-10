@@ -18,15 +18,17 @@ const pages = [{
 }, {
     text: 'О Модулях',
     url: '/#modules'
-}, {
-    text: 'Об экспертах',
-    url: '/adepts'
-}, {
+},
+//  {
+//     text: 'Об экспертах',
+//     url: '/adepts'
+// },
+ {
     text: 'О нас',
     url: '/contacts'
 }, {
     text: 'О будущем',
-    url: '/contacts'
+    url: '/about'
 }];
 
 function ResponsiveAppBar() {

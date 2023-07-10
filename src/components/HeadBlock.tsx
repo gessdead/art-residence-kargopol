@@ -8,7 +8,10 @@ const HeadBlock = ({
     image, 
     url = null, 
     height = '100vh', 
-    fontColor = 'white'
+    fontColor = 'white',
+    buttonText = 'подробнее',
+    outerButton = false,
+    buttonIcon = null
 }) => {
     return <Box className='Promo'
         style={{
@@ -70,15 +73,19 @@ const HeadBlock = ({
                 padding: '10px 50px'
             }}>
                 <Link
-                    to={url} 
+                    to={url}
+                    target={ outerButton && '_blank'}
                     style={{
+                        display: 'flex',
+                        alignItems: 'center',
                         fontFamily: 'var(--font-sans)',
                         fontWeight: '700',
                         textTransform: 'lowercase',
                         textDecoration: 'none'
                     }}>
-                    Подробнее
-                </Link>
+                    {buttonText} &nbsp;{buttonIcon && buttonIcon}
+                </Link>&nbsp;
+                
             </Button>
             </div>
             }
