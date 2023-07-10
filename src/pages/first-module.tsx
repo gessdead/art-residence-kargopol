@@ -36,6 +36,7 @@ const SecondPage = () => {
                     как могло бы выглядеть пространство дома в будущем.
                 </Typography>
             </Container>
+            
 
             <HGallery>
                 <StaticImage
