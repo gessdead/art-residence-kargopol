@@ -10,26 +10,6 @@ import HeadBlock from "../components/HeadBlock";
 import HGallery from "../components/HGallery";
 
 const SecondPage = () => {
-    // const IMAGES_DATA = useStaticQuery(graphql`query firstCarouselImagesQuery {
-    //     allFile(filter: {relativeDirectory: {eq: "mainCarousel"}}) {
-    //         edges {
-    //             node {
-    //                 childImageSharp {
-    //                     gatsbyImageData(
-    //                         layout: CONSTRAINED, 
-    //                         quality: 100, 
-    //                         formats: JPG,
-    //                         placeholder: BLURRED
-    //                     ),
-    //                     fluid {
-    //                         originalName
-    //                     }
-    //                 }
-    //             }
-    //         }
-    //     }
-    // }`);
-
     const bgImage = useStaticQuery(graphql`query getFirstModuleHeadBlockImage {
         file(relativePath: {eq: "firstModule/headImage.jpg"}) {
             childImageSharp {
@@ -297,6 +277,28 @@ const SecondPage = () => {
                     alt="Дом Лехова"
                 />
             </HGallery>
+
+            <Container maxWidth='xl'>
+                <StaticImage
+                    src="../images/participants.png"
+                    layout="fullWidth"
+                    style={{ width: '200px', margin: '0 auto' }}
+                    quality={95}
+                    formats={["auto", "webp"]}
+                    alt="Дом Лехова"
+                />
+                <Typography variant="body1" align="center" fontWeight='700' fontFamily='var(--font-sans)'>
+                    участники модуля
+                </Typography>
+                <StaticImage
+                    src="../images/firstModule/participants.jpg"
+                    layout="fullWidth"
+                    style={{ width: '100%', margin: '0 auto' }}
+                    quality={95}
+                    formats={["auto", "webp"]}
+                    alt="Дом Лехова"
+                />
+            </Container>
         </Layout>
     )
 }
