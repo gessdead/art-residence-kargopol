@@ -11,23 +11,6 @@ import GalleryWrapper from "../components/GalleryWrapper";
 
 const FourthModule = () => {
     const IMAGES_DATA = useStaticQuery(graphql`query fourthCarouselImagesQuery {
-        allFile(filter: {relativeDirectory: {eq: "4thCarousel"}}) {
-            edges {
-                node {
-                    childImageSharp {
-                        gatsbyImageData(
-                            layout: CONSTRAINED, 
-                            quality: 100, 
-                            formats: JPG,
-                            placeholder: BLURRED
-                        ),
-                        fluid {
-                            originalName
-                        }
-                    }
-                }
-            }
-        }
         file(relativePath: {eq: "fourthModule/headPhoto.jpg"}) {
             childImageSharp {
                 original {
@@ -824,7 +807,6 @@ const FourthModule = () => {
                         alt="Дом Лехова"
                     />
                 </GalleryWrapper>
-                {/* <Carousel title='' slidesData={IMAGES_DATA} /> */}
             </Container>
             <Container maxWidth='xl'>
                 <StaticImage
