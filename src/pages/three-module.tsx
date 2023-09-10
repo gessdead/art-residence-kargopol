@@ -9,7 +9,7 @@ import Seo from "../components/seo";
 import HeadBlock from "../components/HeadBlock";
 import GalleryWrapper from "../components/GalleryWrapper";
 
-const FourthPage = () => {
+const ThirdModule = () => {
     const IMAGES_DATA = useStaticQuery(graphql`query thirdCarouselImagesQuery {
         file(relativePath: {eq: "thirdModule/headPhoto.jpg"}) {
             childImageSharp {
@@ -588,5 +588,5 @@ const FourthPage = () => {
 export const Head = () => <Seo title="Третий модуль" />
 
 
-export default FourthPage;
+export default ThirdModule;
 

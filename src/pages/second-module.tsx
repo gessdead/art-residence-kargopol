@@ -9,7 +9,7 @@ import Seo from "../components/seo";
 import HeadBlock from "../components/HeadBlock";
 import GalleryWrapper from "../components/GalleryWrapper";
 
-const ThirdPage = () => {
+const SecondModule = () => {
     const IMAGES_DATA = useStaticQuery(graphql`query secondCarouselImagesQuery {
         allFile(filter: {relativeDirectory: {eq: "2ndCarousel"}}) {
             edges {
@@ -101,5 +101,5 @@ export const Head = () => <Seo title="Второй модуль" />
 
 
 
-export default ThirdPage;
+export default SecondModule;
 

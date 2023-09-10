@@ -37,7 +37,7 @@ const Modules = () => {
         title: 'МОДУЛЬ 3',
         text: 'Возможности приспособления деревянных зданий (домов кластера «Фамилия») для современного использования',
         period: 'апрель-май 2023',
-        link: '/third-module'
+        link: '/three-module'
     }, {
         id: 'm4',
         image: getImage(IMAGES_DATA.allFile.edges[0].node.childImageSharp.gatsbyImageData),

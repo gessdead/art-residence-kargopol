@@ -8,7 +8,7 @@ import Seo from "../components/seo";
 import HeadBlock from "../components/HeadBlock";
 import GalleryWrapper from "../components/GalleryWrapper";
 
-const SecondPage = () => {
+const FirstModule = () => {
     const bgImage = useStaticQuery(graphql`query getFirstModuleHeadBlockImage {
         file(relativePath: {eq: "firstModule/headImage.jpg"}) {
             childImageSharp {
@@ -295,4 +295,4 @@ const SecondPage = () => {
 
 export const Head = () => <Seo title="Первый модуль"/>
 
-export default SecondPage;
+export default FirstModule;
