@@ -69,8 +69,7 @@ const Modules = () => {
                         <Link to={link} style={{ display: 'flex', alignItems: 'center', marginBottom: '16px' }}>
                             <GatsbyImage
                                 image={image}
-                                alt=''
-                                style={{ margin: '0 auto' }}
+                                style={{ margin: '0 auto', maxWidth: '240px' }}
                             />
 
 

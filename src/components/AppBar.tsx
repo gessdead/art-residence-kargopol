@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { StaticImage } from "gatsby-plugin-image";
 import { Link } from 'gatsby';
 import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
@@ -11,6 +10,7 @@ import MenuIcon from '@mui/icons-material/Menu';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
+import CloseIcon from '@mui/icons-material/Close';
 
 const pages = [{
     text: 'О проекте',
@@ -54,7 +54,8 @@ function ResponsiveAppBar() {
                     md: 'relative'
                 },
                 top: {
-                    xs: '10px'
+                    xs: '10px',
+                    md: '0'
                 },
                 boxShadow: 'none'
              }}
@@ -88,8 +89,8 @@ function ResponsiveAppBar() {
                     </Box>
                     <Box sx={{ display: { xs: 'flex', md: 'none' }, justifyContent: 'flex-end' }}>
                         <IconButton
+                            id="menu-burger"
                             size="large"
-                            aria-label="account of current user"
                             aria-controls="menu-appbar"
                             aria-haspopup="true"
                             onClick={handleOpenNavMenu}
@@ -99,15 +100,12 @@ function ResponsiveAppBar() {
                                 borderRadius: '50%',
                             }}
                             >
-                            <MenuIcon />
+                            <MenuIcon style={{zIndex: 2}} />
                         </IconButton>
                         <Menu
                             id="menu-appbar"
                             anchorEl={anchorElNav}
-                            anchorOrigin={{
-                            vertical: 'bottom',
-                                horizontal: 'left',
-                            }}
+                            
                             keepMounted
                             transformOrigin={{
                             vertical: 'top',
@@ -115,19 +113,60 @@ function ResponsiveAppBar() {
                             }}
                             open={Boolean(anchorElNav)}
                             onClose={handleCloseNavMenu}
+                            variant="menu"
                             sx={{ display: { xs: 'block', md: 'none' } }}>
-                            {pages.map((page, index) => (
-                                <MenuItem key={page.url + index} onClick={handleCloseNavMenu}>
-                                    <Link to={page.url}>
-                                    <Typography textAlign="center">{page.text}</Typography>
-                                    </Link>
-                                </MenuItem>
+                            <div style={{
+                                position: 'fixed',
+                                top: 0,
+                                left: 0,
+                                width: '100vw',
+                                height: '100vh',
+                                background: 'white'
+                            }}>
+                                <IconButton
+                                    id="menu-burger"
+                                    size="large"
+                                    aria-controls="menu-appbar"
+                                    aria-haspopup="true"
+                                    onClick={handleCloseNavMenu}
+                                    color="black"
+                                    sx={{
+                                        background: 'white',
+                                        borderRadius: '50%',
+                                        margin: '24px'
+                                    }}
+                                    >
+                                    <CloseIcon />
+                                </IconButton>
+                                {pages.map((page, index) => (
+                                    <MenuItem 
+                                        key={page.url + index} 
+                                        onClick={handleCloseNavMenu}
+                                        style={{width: '100%', justifyContent: 'center', alignSelf: 'center'}}>
+                                        <Link to={page.url}
+                                        style={{
+                                            textDecoration: 'none'
+                                        }}>
+                                            <Typography 
+                                                textAlign="center"
+                                                style={{
+                                                    fontFamily: 'var(--font-sans)',
+                                                    fontWeight: '700',
+                                                    fontSize: '52px',
+                                                    textTransform: 'lowercase',
+                                                    
+                                                }}>
+                                                    {page.text}
+                                                </Typography>
+                                        </Link>
+                                    </MenuItem>
                                 ))}
+                            </div>
                         </Menu>
                     </Box>
                 </Toolbar>
             </Container>
         </AppBar>
-        );
+    );
 }
 export default ResponsiveAppBar;
