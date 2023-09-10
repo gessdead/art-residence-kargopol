@@ -2,6 +2,7 @@ import * as React from "react";
 import { Container, Typography } from "@mui/material";
 import { StaticImage } from "gatsby-plugin-image";
 import { graphql, useStaticQuery } from "gatsby";
+import { useMediaQuery } from "../utils/useMediaQuery";
 
 import Layout from "../components/layout";
 import Seo from "../components/seo";
@@ -9,6 +10,8 @@ import HeadBlock from "../components/HeadBlock";
 import GalleryWrapper from "../components/GalleryWrapper";
 
 const FirstModule = () => {
+    const isDesktop = useMediaQuery('(min-width: 1024px)');
+
     const bgImage = useStaticQuery(graphql`query getFirstModuleHeadBlockImage {
         file(relativePath: {eq: "firstModule/headImage.jpg"}) {
             childImageSharp {
@@ -36,7 +39,7 @@ const FirstModule = () => {
                 </Typography>
             </Container>
 
-            <GalleryWrapper>
+            <GalleryWrapper isDesktop={isDesktop}>
                 <StaticImage
                     src="../images/firstModule/gallery/1.jpg"
                     loading="eager"
@@ -74,7 +77,7 @@ const FirstModule = () => {
                 </Typography>
             </Container>
 
-            <GalleryWrapper>
+            <GalleryWrapper isDesktop={isDesktop}>
                 <StaticImage
                     src="../images/firstModule/gallery/4.jpg"
                     loading="eager"
@@ -112,7 +115,7 @@ const FirstModule = () => {
                 </Typography>
             </Container>
 
-            <GalleryWrapper>
+            <GalleryWrapper isDesktop={isDesktop}>
                 <StaticImage
                     src="../images/firstModule/gallery/7.jpg"
                     loading="eager"

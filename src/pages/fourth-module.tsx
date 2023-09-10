@@ -3,6 +3,7 @@ import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { Container, Typography } from "@mui/material";
 import { StaticImage } from "gatsby-plugin-image";
+import { useMediaQuery } from "../utils/useMediaQuery";
 
 import Layout from "../components/layout";
 import Seo from "../components/seo";
@@ -10,6 +11,8 @@ import HeadBlock from "../components/HeadBlock";
 import GalleryWrapper from "../components/GalleryWrapper";
 
 const FourthModule = () => {
+    const isDesktop = useMediaQuery('(min-width: 1024px)');
+
     const IMAGES_DATA = useStaticQuery(graphql`query fourthCarouselImagesQuery {
         file(relativePath: {eq: "fourthModule/headPhoto.jpg"}) {
             childImageSharp {
@@ -60,7 +63,7 @@ const FourthModule = () => {
                     На основании наблюдений были выделены три главных пространственных элемента, играющих 
                     значительную роль в визуальных раскрытиях и перспективах города.
                 </Typography>
-                <GalleryWrapper>
+                <GalleryWrapper isDesktop={isDesktop}>
                     <StaticImage
                         src="../images/fourthModule/gallery/3.jpg"
                         layout="fullWidth"
@@ -294,7 +297,7 @@ const FourthModule = () => {
                     История оставившая после себя знаки и символы прошедших эпох. История заключенная в 
                     материале, воплощенная в элементах на фасадах, в цвете, в скате крыши и так далее.
                 </Typography>
-                <GalleryWrapper>
+                <GalleryWrapper isDesktop={isDesktop}>
                     <StaticImage
                         src="../images/fourthModule/gallery/26.jpg"
                         layout="fullWidth"
@@ -376,7 +379,7 @@ const FourthModule = () => {
                     диалекте. И главными инструментами их общения выступают белое полотно цвета и эффект ровной, 
                     массивной протяженности, что создает игра плоскостей вместе с белой штукатурной отделкой камня.
                 </Typography>
-                <GalleryWrapper>
+                <GalleryWrapper isDesktop={isDesktop}>
                     <StaticImage
                         src="../images/fourthModule/gallery/33.jpg"
                         layout="fullWidth"
@@ -453,7 +456,7 @@ const FourthModule = () => {
                     деревянным. В архитектурных приемах и декоративных элементах пересекаются сюжеты, характерные 
                     для обеих этих групп.
                 </Typography>
-                <GalleryWrapper>
+                <GalleryWrapper isDesktop={isDesktop}>
                     <StaticImage
                         src="../images/fourthModule/gallery/40.jpg"
                         layout="fullWidth"
@@ -512,7 +515,7 @@ const FourthModule = () => {
                 <Typography variant="body1" align="center" fontFamily='var(--font-sans)'>
                     Деревянная архитектура Каргополя - самая богато представленная,но при этом и самая уязвимая.
                 </Typography>
-                <GalleryWrapper>
+                <GalleryWrapper isDesktop={isDesktop}>
                     <StaticImage
                         src="../images/fourthModule/gallery/45.jpg"
                         layout="fullWidth"
@@ -604,7 +607,7 @@ const FourthModule = () => {
                     Важными элементами визуального языка города являются не только архитектура, но и то, 
                     что находится подле нее, и часто остается без внимания исследователей.
                 </Typography>
-                <GalleryWrapper>
+                <GalleryWrapper isDesktop={isDesktop}>
                     <StaticImage
                         src="../images/fourthModule/gallery/54.jpg"
                         layout="fullWidth"
@@ -717,7 +720,7 @@ const FourthModule = () => {
                 <Typography variant="body1" align="center" fontFamily='var(--font-sans)'>
                     Стоит ли подчеркивать это многообразие или может быть стоит что-то сгладить и приглушить - эти вопросы поднимают куда более сложную дискуссию.
                 </Typography>
-                <GalleryWrapper>
+                <GalleryWrapper isDesktop={isDesktop}>
                     <StaticImage
                         src="../images/fourthModule/gallery/65.jpg"
                         layout="fullWidth"

@@ -3,6 +3,9 @@ import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { Container, Typography } from "@mui/material";
 import { StaticImage } from "gatsby-plugin-image";
+import { useMediaQuery } from "../utils/useMediaQuery";
+
+
 
 import Layout from "../components/layout";
 import Seo from "../components/seo";
@@ -10,6 +13,8 @@ import HeadBlock from "../components/HeadBlock";
 import GalleryWrapper from "../components/GalleryWrapper";
 
 const ThirdModule = () => {
+    const isDesktop = useMediaQuery('(min-width: 1024px)');
+
     const IMAGES_DATA = useStaticQuery(graphql`query thirdCarouselImagesQuery {
         file(relativePath: {eq: "thirdModule/headPhoto.jpg"}) {
             childImageSharp {
@@ -62,7 +67,7 @@ const ThirdModule = () => {
                     рассмотрены некоторые кейсы с других малых городах, которые уже сталкивались с анагичными 
                     вопросами и имеют опыт их решения.
                 </Typography>
-                <GalleryWrapper>
+                <GalleryWrapper isDesktop={isDesktop}>
                     <StaticImage
                         src="../images/thirdModule/gallery/4.jpg"
                         layout="fullWidth"
@@ -210,7 +215,7 @@ const ThirdModule = () => {
                     аккумулировали бы внимание, желания и силы жителей соседних домов.
                 </Typography>
 
-                <GalleryWrapper>
+                <GalleryWrapper isDesktop={isDesktop}>
                     <StaticImage
                         src="../images/thirdModule/gallery/23.jpg"
                         layout="fullWidth"
@@ -253,7 +258,7 @@ const ThirdModule = () => {
                 <Typography variant="body1" align="center" fontFamily='var(--font-sans)'>
                     Дома кластера - как узлы, которые каждый в своем районе создат дискуссию и свою новую историю.
                 </Typography>
-                <GalleryWrapper>
+                <GalleryWrapper isDesktop={isDesktop}>
                     <StaticImage
                         src="../images/thirdModule/gallery/27.jpg"
                         layout="fullWidth"
@@ -296,7 +301,7 @@ const ThirdModule = () => {
                     Дом, куда тебе хочется прийти после занятий, где ты можешь пообщаться со своими друзьями, 
                     познакомиться с кем-нибудь, чем-то заняться - в целом провести свое время. «Близкий дом».
                 </Typography>
-                <GalleryWrapper>
+                <GalleryWrapper isDesktop={isDesktop}>
                     <StaticImage
                         src="../images/thirdModule/gallery/31.jpg"
                         layout="fullWidth"
@@ -396,7 +401,7 @@ const ThirdModule = () => {
                     растопку, как пространство дома преобразовывается. Вот уже и тепло, и калитки подоспели, и друзья 
                     уже все в сборе, сидят, радостные и довольные.
                 </Typography>
-                <GalleryWrapper>
+                <GalleryWrapper isDesktop={isDesktop}>
                     <StaticImage
                         src="../images/thirdModule/gallery/42.jpg"
                         layout="fullWidth"
@@ -515,7 +520,7 @@ const ThirdModule = () => {
                     Каким должен быть центр Арт-Кластера? Это такой большой сундук, в котором постоянно кипит энергия. 
                     Это место встречи, место коммуникации, место генерации идей. Это место отдыха и вдохновения.
                 </Typography>
-                <GalleryWrapper>
+                <GalleryWrapper isDesktop={isDesktop}>
                     <StaticImage
                         src="../images/thirdModule/gallery/55.jpg"
                         layout="fullWidth"

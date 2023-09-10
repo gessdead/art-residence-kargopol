@@ -3,6 +3,7 @@ import * as React from "react";
 import { Container, Typography } from "@mui/material";
 import { graphql, useStaticQuery } from "gatsby";
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
+import { useMediaQuery } from "../utils/useMediaQuery";
 
 import Layout from "../components/layout";
 import Seo from "../components/seo";
@@ -10,6 +11,8 @@ import HeadBlock from "../components/HeadBlock";
 import GalleryWrapper from "../components/GalleryWrapper";
 
 const SecondModule = () => {
+    const isDesktop = useMediaQuery('(min-width: 1024px)');
+
     const IMAGES_DATA = useStaticQuery(graphql`query secondCarouselImagesQuery {
         allFile(filter: {relativeDirectory: {eq: "2ndCarousel"}}) {
             edges {
@@ -63,7 +66,7 @@ const SecondModule = () => {
                     исследование городского полотна и чувства, которое оно вызвало у его авторов.
                 </Typography>
             </Container>
-            <GalleryWrapper>
+            <GalleryWrapper isDesktop={isDesktop}>
                 {slides.map((item, i) =>
                     <GatsbyImage 
                         image={item.image} 
