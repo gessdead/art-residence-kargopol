@@ -3,7 +3,6 @@ import * as React from 'react'
 import Layout from "../components/layout"
 import ResponsiveAppBar from '../components/AppBar';
 import Promo from '../components/Promo/Promo';
-import Circle from '../components/Circle';
 import Modules from '../components/Modules';
 import Seo from '../components/seo';
 import { StaticImage } from 'gatsby-plugin-image';
