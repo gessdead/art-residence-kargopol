@@ -3,11 +3,11 @@ import * as React from "react";
 import { Container, Typography } from "@mui/material";
 import { graphql, useStaticQuery } from "gatsby";
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image";
+
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import Carousel from "../components/Carousel";
 import HeadBlock from "../components/HeadBlock";
-import HGallery from "../components/HGallery";
+import GalleryWrapper from "../components/GalleryWrapper";
 
 const ThirdPage = () => {
     const IMAGES_DATA = useStaticQuery(graphql`query secondCarouselImagesQuery {
@@ -63,7 +63,7 @@ const ThirdPage = () => {
                     исследование городского полотна и чувства, которое оно вызвало у его авторов.
                 </Typography>
             </Container>
-            <HGallery>
+            <GalleryWrapper>
                 {slides.map((item, i) =>
                     <GatsbyImage 
                         image={item.image} 
@@ -71,7 +71,7 @@ const ThirdPage = () => {
                         alt='' 
                     />
                 )}
-            </HGallery>
+            </GalleryWrapper>
             <Container maxWidth='xl'>
                 <StaticImage
                     src="../images/participants.png"

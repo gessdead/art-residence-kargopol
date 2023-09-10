@@ -3,12 +3,11 @@ import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { Container, Typography } from "@mui/material";
 import { StaticImage } from "gatsby-plugin-image";
+
 import Layout from "../components/layout";
 import Seo from "../components/seo";
-import Carousel from "../components/Carousel";
 import HeadBlock from "../components/HeadBlock";
-import HGallery from "../components/HGallery";
-
+import GalleryWrapper from "../components/GalleryWrapper";
 
 const FourthPage = () => {
     const IMAGES_DATA = useStaticQuery(graphql`query thirdCarouselImagesQuery {
@@ -80,7 +79,7 @@ const FourthPage = () => {
                     рассмотрены некоторые кейсы с других малых городах, которые уже сталкивались с анагичными 
                     вопросами и имеют опыт их решения.
                 </Typography>
-                <HGallery>
+                <GalleryWrapper>
                     <StaticImage
                         src="../images/thirdModule/gallery/4.jpg"
                         layout="fullWidth"
@@ -177,7 +176,7 @@ const FourthPage = () => {
                         formats={["auto", "webp"]}
                         alt="Дом Лехова"
                     />
-                </HGallery>
+                </GalleryWrapper>
                 {/* <Carousel title='' slidesData={IMAGES_DATA} /> */}
 
                 <Typography
@@ -228,7 +227,7 @@ const FourthPage = () => {
                     аккумулировали бы внимание, желания и силы жителей соседних домов.
                 </Typography>
 
-                <HGallery>
+                <GalleryWrapper>
                     <StaticImage
                         src="../images/thirdModule/gallery/23.jpg"
                         layout="fullWidth"
@@ -261,7 +260,7 @@ const FourthPage = () => {
                         formats={["auto", "webp"]}
                         alt="Дом Лехова"
                     />
-                </HGallery>
+                </GalleryWrapper>
 
                 
                 <Typography marginBottom='20px' variant="h5" align="center" fontWeight='700' fontFamily='var(--font-sans)'>
@@ -271,7 +270,7 @@ const FourthPage = () => {
                 <Typography variant="body1" align="center" fontFamily='var(--font-sans)'>
                     Дома кластера - как узлы, которые каждый в своем районе создат дискуссию и свою новую историю.
                 </Typography>
-                <HGallery>
+                <GalleryWrapper>
                     <StaticImage
                         src="../images/thirdModule/gallery/27.jpg"
                         layout="fullWidth"
@@ -296,7 +295,7 @@ const FourthPage = () => {
                         formats={["auto", "webp"]}
                         alt="Дом Лехова"
                     />
-                </HGallery>
+                </GalleryWrapper>
 
 
                 <Typography marginBottom='20px' variant="h5" align="center" fontWeight='700' fontFamily='var(--font-sans)'>
@@ -314,7 +313,7 @@ const FourthPage = () => {
                     Дом, куда тебе хочется прийти после занятий, где ты можешь пообщаться со своими друзьями, 
                     познакомиться с кем-нибудь, чем-то заняться - в целом провести свое время. «Близкий дом».
                 </Typography>
-                <HGallery>
+                <GalleryWrapper>
                     <StaticImage
                         src="../images/thirdModule/gallery/31.jpg"
                         layout="fullWidth"
@@ -395,7 +394,7 @@ const FourthPage = () => {
                         formats={["auto", "webp"]}
                         alt="Дом Лехова"
                     />
-                </HGallery>
+                </GalleryWrapper>
                 
 
                 <Typography marginBottom='20px' variant="h5" align="center" fontWeight='700' fontFamily='var(--font-sans)'>
@@ -414,7 +413,7 @@ const FourthPage = () => {
                     растопку, как пространство дома преобразовывается. Вот уже и тепло, и калитки подоспели, и друзья 
                     уже все в сборе, сидят, радостные и довольные.
                 </Typography>
-                <HGallery>
+                <GalleryWrapper>
                     <StaticImage
                         src="../images/thirdModule/gallery/42.jpg"
                         layout="fullWidth"
@@ -511,7 +510,7 @@ const FourthPage = () => {
                         formats={["auto", "webp"]}
                         alt="Дом Лехова"
                     />
-                </HGallery>
+                </GalleryWrapper>
 
 
                 <Typography marginBottom='20px' variant="h5" align="center" fontWeight='700' fontFamily='var(--font-sans)'>
@@ -533,7 +532,7 @@ const FourthPage = () => {
                     Каким должен быть центр Арт-Кластера? Это такой большой сундук, в котором постоянно кипит энергия. 
                     Это место встречи, место коммуникации, место генерации идей. Это место отдыха и вдохновения.
                 </Typography>
-                <HGallery>
+                <GalleryWrapper>
                     <StaticImage
                         src="../images/thirdModule/gallery/55.jpg"
                         layout="fullWidth"
@@ -574,7 +573,7 @@ const FourthPage = () => {
                         formats={["auto", "webp"]}
                         alt="Дом Лехова"
                     />
-                </HGallery>
+                </GalleryWrapper>
                 
             </Container>
             <Container maxWidth='xl'>

@@ -4,10 +4,9 @@ import { StaticImage } from "gatsby-plugin-image";
 import { graphql, useStaticQuery } from "gatsby";
 
 import Layout from "../components/layout";
-import Carousel from "../components/Carousel";
 import Seo from "../components/seo";
 import HeadBlock from "../components/HeadBlock";
-import HGallery from "../components/HGallery";
+import GalleryWrapper from "../components/GalleryWrapper";
 
 const SecondPage = () => {
     const bgImage = useStaticQuery(graphql`query getFirstModuleHeadBlockImage {
@@ -36,9 +35,8 @@ const SecondPage = () => {
                     как могло бы выглядеть пространство дома в будущем.
                 </Typography>
             </Container>
-            
 
-            <HGallery>
+            <GalleryWrapper>
                 <StaticImage
                     src="../images/firstModule/gallery/1.jpg"
                     loading="eager"
@@ -66,7 +64,7 @@ const SecondPage = () => {
                     formats={["auto", "webp"]}
                     alt="Дом Лехова"
                 />
-            </HGallery>
+            </GalleryWrapper>
 
             <Container maxWidth='xl'>
                 <Typography variant="body1" align="center" fontFamily='var(--font-sans)'>
@@ -76,7 +74,7 @@ const SecondPage = () => {
                 </Typography>
             </Container>
 
-            <HGallery>
+            <GalleryWrapper>
                 <StaticImage
                     src="../images/firstModule/gallery/4.jpg"
                     loading="eager"
@@ -104,7 +102,7 @@ const SecondPage = () => {
                     formats={["auto", "webp"]}
                     alt="Дом Лехова"
                 />
-            </HGallery>
+            </GalleryWrapper>
 
             <Container maxWidth='xl'>
                 <Typography variant="body1" align="center" fontFamily='var(--font-sans)'>
@@ -114,7 +112,7 @@ const SecondPage = () => {
                 </Typography>
             </Container>
 
-            <HGallery>
+            <GalleryWrapper>
                 <StaticImage
                     src="../images/firstModule/gallery/7.jpg"
                     loading="eager"
@@ -268,7 +266,7 @@ const SecondPage = () => {
                     formats={["auto", "webp"]}
                     alt="Дом Лехова"
                 />
-            </HGallery>
+            </GalleryWrapper>
 
             <Container maxWidth='xl'>
                 <StaticImage

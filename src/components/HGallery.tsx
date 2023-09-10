@@ -6,21 +6,18 @@ const HGallery = ({children}) => {
     return (
         <div className="hided_scrollbar" style={{
             width: '100%',
-            overflowX: 'auto',
+            overflowX: 'scroll',
             height: '560px',
-            margin: '20px 0'            
+            margin: '20px 0',
+            position: 'relative'
         }}>
-            <Draggable 
-                axis='x'
-            >
-                <div style={{
-                    display: 'flex',
-                    height: '100%',
-                    width: 'max-content'
-                }}>
+            <div style={{
+               display: 'flex',
+               height: '100%',
+               width: 'max-content'
+            }}>          
                 {children}
-                </div>
-            </Draggable>
+            </div>
         </div>
     )
 }

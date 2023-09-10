@@ -3,10 +3,11 @@ import * as React from "react";
 import { graphql, useStaticQuery } from "gatsby";
 import { Container, Typography } from "@mui/material";
 import { StaticImage } from "gatsby-plugin-image";
+
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 import HeadBlock from "../components/HeadBlock";
-import HGallery from "../components/HGallery";
+import GalleryWrapper from "../components/GalleryWrapper";
 
 const FourthModule = () => {
     const IMAGES_DATA = useStaticQuery(graphql`query fourthCarouselImagesQuery {
@@ -76,7 +77,7 @@ const FourthModule = () => {
                     На основании наблюдений были выделены три главных пространственных элемента, играющих 
                     значительную роль в визуальных раскрытиях и перспективах города.
                 </Typography>
-                <HGallery>
+                <GalleryWrapper>
                     <StaticImage
                         src="../images/fourthModule/gallery/3.jpg"
                         layout="fullWidth"
@@ -261,7 +262,7 @@ const FourthModule = () => {
                         formats={["auto", "webp"]}
                         alt="Дом Лехова"
                     />
-                </HGallery>
+                </GalleryWrapper>
                 <Typography
                     style={{ 
                         maxWidth: '550px',
@@ -310,7 +311,7 @@ const FourthModule = () => {
                     История оставившая после себя знаки и символы прошедших эпох. История заключенная в 
                     материале, воплощенная в элементах на фасадах, в цвете, в скате крыши и так далее.
                 </Typography>
-                <HGallery>
+                <GalleryWrapper>
                     <StaticImage
                         src="../images/fourthModule/gallery/26.jpg"
                         layout="fullWidth"
@@ -367,7 +368,7 @@ const FourthModule = () => {
                         formats={["auto", "webp"]}
                         alt="Дом Лехова"
                     />
-                </HGallery>
+                </GalleryWrapper>
                 <Typography variant="body1" align="center" marginBottom='30px' fontFamily='var(--font-sans)'>
                     Про дома можно говорить много. <br/>
                     Каменные, деревянные, комбинированные, каменные резные, каменные строгие, деревянные похожие 
@@ -392,7 +393,7 @@ const FourthModule = () => {
                     диалекте. И главными инструментами их общения выступают белое полотно цвета и эффект ровной, 
                     массивной протяженности, что создает игра плоскостей вместе с белой штукатурной отделкой камня.
                 </Typography>
-                <HGallery>
+                <GalleryWrapper>
                     <StaticImage
                         src="../images/fourthModule/gallery/33.jpg"
                         layout="fullWidth"
@@ -449,7 +450,7 @@ const FourthModule = () => {
                         formats={["auto", "webp"]}
                         alt="Дом Лехова"
                     />
-                </HGallery>
+                </GalleryWrapper>
 
 
                 <StaticImage
@@ -469,7 +470,7 @@ const FourthModule = () => {
                     деревянным. В архитектурных приемах и декоративных элементах пересекаются сюжеты, характерные 
                     для обеих этих групп.
                 </Typography>
-                <HGallery>
+                <GalleryWrapper>
                     <StaticImage
                         src="../images/fourthModule/gallery/40.jpg"
                         layout="fullWidth"
@@ -510,7 +511,7 @@ const FourthModule = () => {
                         formats={["auto", "webp"]}
                         alt="Дом Лехова"
                     />
-                </HGallery>
+                </GalleryWrapper>
 
 
                 <StaticImage
@@ -528,7 +529,7 @@ const FourthModule = () => {
                 <Typography variant="body1" align="center" fontFamily='var(--font-sans)'>
                     Деревянная архитектура Каргополя - самая богато представленная,но при этом и самая уязвимая.
                 </Typography>
-                <HGallery>
+                <GalleryWrapper>
                     <StaticImage
                         src="../images/fourthModule/gallery/45.jpg"
                         layout="fullWidth"
@@ -601,7 +602,7 @@ const FourthModule = () => {
                         formats={["auto", "webp"]}
                         alt="Дом Лехова"
                     />
-                </HGallery>
+                </GalleryWrapper>
 
                 
                 <StaticImage
@@ -620,7 +621,7 @@ const FourthModule = () => {
                     Важными элементами визуального языка города являются не только архитектура, но и то, 
                     что находится подле нее, и часто остается без внимания исследователей.
                 </Typography>
-                <HGallery>
+                <GalleryWrapper>
                     <StaticImage
                         src="../images/fourthModule/gallery/54.jpg"
                         layout="fullWidth"
@@ -709,7 +710,7 @@ const FourthModule = () => {
                         formats={["auto", "webp"]}
                         alt="Дом Лехова"
                     />
-                </HGallery>
+                </GalleryWrapper>
 
 
                 <StaticImage
@@ -733,7 +734,7 @@ const FourthModule = () => {
                 <Typography variant="body1" align="center" fontFamily='var(--font-sans)'>
                     Стоит ли подчеркивать это многообразие или может быть стоит что-то сгладить и приглушить - эти вопросы поднимают куда более сложную дискуссию.
                 </Typography>
-                <HGallery>
+                <GalleryWrapper>
                     <StaticImage
                         src="../images/fourthModule/gallery/65.jpg"
                         layout="fullWidth"
@@ -822,7 +823,7 @@ const FourthModule = () => {
                         formats={["auto", "webp"]}
                         alt="Дом Лехова"
                     />
-                </HGallery>
+                </GalleryWrapper>
                 {/* <Carousel title='' slidesData={IMAGES_DATA} /> */}
             </Container>
             <Container maxWidth='xl'>

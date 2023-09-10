@@ -13,9 +13,9 @@ const Promo = () => {
     const bgImage = useStaticQuery(graphql`query getPromoImage {
         file(relativePath: {eq: "main/leha.jpg"}) {
             childImageSharp {
-            original {
-              src
-            }
+                original {
+                src
+                }
             }
         }
       }`)
