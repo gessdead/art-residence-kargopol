@@ -9,10 +9,10 @@
  */
 module.exports = {
   siteMetadata: {
-    title: `Арт-резиденция`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
-    siteUrl: `https://gatsbystarterdefaultsource.gatsbyjs.io/`,
+    title: `«Архитектурная мозаика Каргополя»`,
+    description: `Арт-резиденция «Архитектурная мозаика Каргополя»`,
+    author: `@gessdead`,
+    siteUrl: `https://residence.art-kargopol.ru/`,
   },
   plugins: [
     `gatsby-plugin-image`,

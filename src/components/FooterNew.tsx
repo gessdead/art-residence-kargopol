@@ -81,8 +81,9 @@ const Footer = () => {
                         />
                     </Grid>
                 </Grid>
-                © {new Date().getFullYear()}
-    
+                <span>
+                    © 2022 - {new Date().getFullYear()}
+                </span>
             </Container>
         </div>
     )
