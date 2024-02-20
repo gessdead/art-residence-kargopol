@@ -27,7 +27,7 @@ function Seo({ description, title, children }) {
   const defaultTitle = site.siteMetadata?.title
 
   return (
-    <>
+    <html lang="ru">
       <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
       <meta name="description" content={metaDescription} />
       <meta property="og:title" content={title} />
@@ -38,7 +38,7 @@ function Seo({ description, title, children }) {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
       {children}
-    </>
+    </html>
   )
 }
 
