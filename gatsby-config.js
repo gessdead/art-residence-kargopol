@@ -10,7 +10,7 @@
 module.exports = {
   siteMetadata: {
     title: `«Архитектурная мозаика Каргополя»`,
-    description: `Арт-резиденция «Архитектурная мозаика Каргополя»`,
+    description: `Арт-резиденция «Архитектурная мозаика Каргополя».`,
     author: `@gessdead`,
     siteUrl: `https://residence.art-kargopol.ru/`,
   },

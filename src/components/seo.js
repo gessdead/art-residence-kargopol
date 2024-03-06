@@ -27,8 +27,9 @@ function Seo({ description, title, children }) {
   const defaultTitle = site.siteMetadata?.title
 
   return (
-    <>
+    <html lang="ru">
       <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
+      <meta name="google-site-verification" content="V-XDF7oTtS1Clq8wJZtSTDZv_rakfG32rF6LRhVqEMo" />
       <meta name="description" content={metaDescription} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
@@ -38,7 +39,7 @@ function Seo({ description, title, children }) {
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={metaDescription} />
       {children}
-    </>
+    </html>
   )
 }
 
