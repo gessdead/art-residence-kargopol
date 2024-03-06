@@ -29,6 +29,7 @@ function Seo({ description, title, children }) {
   return (
     <html lang="ru">
       <title>{defaultTitle ? `${title} | ${defaultTitle}` : title}</title>
+      <meta name="google-site-verification" content="V-XDF7oTtS1Clq8wJZtSTDZv_rakfG32rF6LRhVqEMo" />
       <meta name="description" content={metaDescription} />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={metaDescription} />
