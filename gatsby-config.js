@@ -18,6 +18,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-material-ui`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
